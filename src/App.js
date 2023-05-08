@@ -7,7 +7,7 @@ import ReactIcon from './logo192.png'
 const App = () => {
 
   const [hide, setHide] = useState(true)
-  // const [color, setColor] = useState('#00FFCA')
+  const [color, setColor] = useState('#00FFCA')
 
   const SendMail = async () => {
 
@@ -85,8 +85,8 @@ const App = () => {
             <Navigation>.about()</Navigation>
           </Links>
           <Socials>
-            <Platforms>Github</Platforms>
-            <Platforms>Linkedin</Platforms>
+            <Platforms><i className="fa-brands fa-github"></i></Platforms>
+            <Platforms><i className="fa-brands fa-linkedin"></i></Platforms>
           </Socials>
         </Header>
 
@@ -104,43 +104,48 @@ const App = () => {
             </Toptext>
           </Brand>
           <Stacked>
-            My Stack
+            MY STACK
             <StackIcons>
               <ReactJS>
-                <Img src={ReactIcon} alt="" />
+                <div>
+
+                  <Img src={ReactIcon} alt="" />
+                </div>
               </ReactJS>
               <Angular>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="" />
               </Angular>
               <NextJS>
                 <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
               </NextJS>
               <Rest>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://cdn-icons-png.flaticon.com/512/103/103093.png" alt="" style={{
+                  filter: 'invert(100%)'
+                }} />
               </Rest>
               <FontAwesome>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://pbs.twimg.com/profile_images/1491038861224517637/s-H1KgWO_400x400.png" alt="" />
               </FontAwesome>
               <StyledComponent>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://www.daggala.com/static/228867c3668e439101821568a8a03b54/19ca5/sc.png" alt="" />
               </StyledComponent>
               <Firebase>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://firebase.google.com/static/images/brand-guidelines/logo-logomark.png" alt="" />
               </Firebase>
               <NodeJS>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://camo.githubusercontent.com/a592e4641d068dd9c5bb86813115cd21d4b01b5a3dded5547733cf59923e81f9/68747470733a2f2f7261772e6769746875622e636f6d2f436972636c6543492d5075626c69632f63696d672d6e6f64652f6d61696e2f696d672f636972636c652d6e6f64656a732e7376673f73616e6974697a653d74727565" alt="" />
               </NodeJS>
               <Express>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png" alt="" />
               </Express>
               <MongoDb>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://gocode.colorado.gov/wp-content/uploads/2020/11/MongoDB-logo.gif" alt="" />
               </MongoDb>
               <MERNStack>
-                <Img src="https://www.rlogical.com/wp-content/uploads/2023/03/Rlogical-Blog-Images-thumbnail.webp" alt="" />
+                <Img src="https://uploads-ssl.webflow.com/60cca9384ff7eaa931a24b69/60ce44133ce5aee0e6c9cac9_Mern.png" alt="" />
               </MERNStack>
-
             </StackIcons>
+
           </Stacked>
         </Content>
         <ProjectSection>
@@ -246,15 +251,16 @@ const Socials = styled.div`
 `;
 
 const Platforms = styled.div`
-     margin:10px; 
+    margin:10px; 
     box-sizing: border-box;
     padding:10px;
     border-radius:40px;
     
-    border:2px solid rgb(21 23 28);;
+    border:2px solid rgb(21 23 28);
     :hover{
-      border:2px solid #BC6FF1 ;
-      transition:0.25s ease-in-out;
+      color: #BC6FF1;
+      transition:0.25s color;
+      transition-timing-function: ease-in-out 
     } 
     
 `;
@@ -363,9 +369,10 @@ const Stacked = styled.div`
     justify-content: center;
     overflow:hidden;
     margin-top:98px;
-    border:1px solid red;
     align-items: center;
     flex-direction: column;
+    background-filter:blur(500px)
+
 `;
 
 const ProjectSection = styled.div`
@@ -432,126 +439,138 @@ const Lower = styled.div`
   background-color:#1d1c24;
 `;
 
+
 const StackIcons = styled.div`
-    border:1px solid red;
     position:relative;
-    height:700px;
+    height:750px;
     width:800px;
+    margin-top:80px;
+    z-index:30;
 `;
 
 const ReactJS = styled.div`
+
     position:absolute;
     left:41%;
     border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
+    :hover{
+      opacity:0;
+      transition:0.25s ease-in-out;
+    }
 `;
 
 const Angular = styled.div`
+
   position:absolute;
   top:10%;
   left:0%;
   border-radius:50%;
-    border:1px solid red;
-    height:150px;
-    width:150px;
+  height:150px;
+  width:150px;
 `;
 
 const NextJS = styled.div`
+
   position:absolute;
   top:10%;
   right:0%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
 
 `;
 
 const Rest = styled.div`
+
   position:absolute;
   top:40%;
-  right:0%;
+  right:12%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
 `;
 
 const FontAwesome = styled.div`
+
   position:absolute;
   top:40%;
-  left:0%;
+  left:12%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
+    overflow:hidden;
+
 `;
 
 const StyledComponent = styled.div`
+
   position:absolute;
   top:25%;
-  left:45%;
+  left:41%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
+    overflow:hidden;
 
 
 `;
 
 const Firebase = styled.div`
+
 position:absolute;
   bottom:15%;
   right:25%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
+    overflow:hidden;
 `;
 
 const NodeJS = styled.div`
+
   position:absolute;
   bottom:15%;
   left:25%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
 `;
 
 const Express = styled.div`
+
   position:absolute;
-  bottom:22%;
+  bottom:18%;
   right:0%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
 `;
 
 const MongoDb = styled.div`
+
   position:absolute;
-  bottom:22%;
+  bottom:18%;
   left:0%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
+    overflow:hidden;
 `;
 
 const MERNStack = styled.div`
+
   position:absolute;
-  bottom:1%;
-  left:37%;
+  bottom:0%;
+  left:41%;
   border-radius:50%;
-    border:1px solid red;
     height:150px;
     width:150px;
 `;
 
 const Img = styled.img`
+
   height:100%;
   width:100%; 
 `;
