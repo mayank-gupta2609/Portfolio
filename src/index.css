@@ -40,7 +40,27 @@ h3 {
   border: 30px solid #FDCFDF;
 }
 
+*::-webkit-scrollbar-corner{
+  display:none;
+}
+
 a {
   all: unset;
   cursor: pointer;
+}
+
+.icon{ 
+  color:grey; 
+  padding:5px;
+  border-radius: 0px 20px 20px 0px;
+  padding-right:7px;
+}
+
+.icon:hover{ 
+  opacity: 0.7;
+}
+.channellogo{
+  height:50px;
+  border-radius: 50%;
+  margin:5px;
 }

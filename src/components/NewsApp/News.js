@@ -109,6 +109,7 @@ const Container = styled.div`
     background-color:#F7F9FC;
     padding:30px;
     box-sizing:border-box;  
+    overflow:hidden;
 `;
 
 
@@ -163,12 +164,13 @@ const Heading = styled.div`
 `;
 
 const ArticleSection = styled.div`
-    display:grid; 
     padding-left:17px;
+    display:grid; 
     grid-template-columns: 100px 100px 100px;
-  grid-template-rows: 400px 2 10px; 
-  column-gap: 310px;
-  row-gap: 3px;
+    grid-template-rows: 400px 2 10px; 
+    column-gap: 310px;
+    row-gap: 3px;
+    zoom:87%; 
 `;
 
 const ArticleCard = styled.div`
