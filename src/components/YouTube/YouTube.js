@@ -36,6 +36,7 @@ const YouTube = () => {
         }
     }
 
+
     useEffect(() => {
         fetchVideos()
     }, [request])
@@ -57,9 +58,18 @@ const YouTube = () => {
                     <Top>
 
                         <Search>
+                            <form onSubmit={(e) => {
+                                e.preventDefault()
 
-                            <Input></Input>
-                            <i className="fa-solid fa-magnifying-glass icon"></i>
+                            }}>
+
+                                <Input onKeyDown={(e) => {
+                                    if (e.key === "Enter") {
+                                        setRequest(e.target.value)
+                                    }
+                                }}></Input>
+                                <i className="fa-solid fa-magnifying-glass icon"></i>
+                            </form>
                         </Search>
                     </Top>
                     {loading && <Loader></Loader>}
